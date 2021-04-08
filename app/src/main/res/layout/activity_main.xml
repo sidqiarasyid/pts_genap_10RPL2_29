@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:src="@drawable/bg"
+        android:id="@+id/bg"/>
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/pinterest"
+        android:layout_below="@+id/bg"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-35dp"
+        android:id="@+id/icon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Pinterest"
+        android:layout_below="@+id/icon"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:id="@+id/ttl"/>
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/ttl">
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:hint="Email address"
+            android:paddingTop="17dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/round"
+            android:layout_gravity="center"
+            android:inputType="text"/>
+        <Button
+            android:id="@+id/btnsub"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roundbtn1"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal"/>
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/roundbtn2">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/fb"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/btnfb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="Continue with Facebook"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/g"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/btngoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="Continue with Google"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
