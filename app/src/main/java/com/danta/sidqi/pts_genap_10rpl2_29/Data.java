@@ -3,13 +3,15 @@ package com.danta.sidqi.pts_genap_10rpl2_29;
 public class Data {
     private String ttl;
     private String artist;
+    private String info;
     private int update;
     private int imgurl;
 
 
-    public Data(String title, String artist, int update, Integer img){
+    public Data(String title, String artist, String info, int update, Integer img){
         this.ttl = title;
         this.artist = artist;
+        this.info = info;
         this.update = update;
         this.imgurl = img;
     }
@@ -44,5 +46,13 @@ public class Data {
 
     public void setImgurl(int imgurl) {
         this.imgurl = imgurl;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }

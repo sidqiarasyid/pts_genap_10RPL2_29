@@ -9,11 +9,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+import javax.security.auth.callback.Callback;
 
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder>{
+    private Callback callback;
+    interface Callback{
+        void onClick(int position);
+    }
+
     private ArrayList<Data> datalist;
-    public RvAdapter(ArrayList<Data> datalist){
+    public RvAdapter(ArrayList<Data> datalist, Callback callback){
+        this.callback = callback;
         this.datalist = datalist;
     }
 
@@ -42,12 +50,21 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder>{
     public class RvViewHolder extends RecyclerView.ViewHolder{
         private TextView txtttl, txtupdate, txtartist;
         private ImageView imgpaintings;
+        private CardView container;
         public RvViewHolder(@NonNull View itemView) {
             super(itemView);
             txtttl = (TextView) itemView.findViewById(R.id.ttltxt);
             txtupdate = (TextView) itemView.findViewById(R.id.udtxt);
             txtartist = (TextView) itemView.findViewById(R.id.artisttxt);
             imgpaintings = (ImageView) itemView.findViewById(R.id.img);
+            container = (CardView) itemView.findViewById(R.id.card);
+            container.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    callback.onClick(getAdapterPosition());
+                }
+            });
+
         }
     }
 }
